@@ -6,10 +6,10 @@
 }
 
 :root{
-    --dark-main: #1f1f1f;
-    --dark-background: #141414;
-    --gray-second: #333;
-    --accent-color: #C4F82A
+    --gray-900: hsl(0, 0%, 8%);
+    --gray-800: hsl(0, 0%, 12%);
+    --gray-700: hsl(0, 0%, 20%);
+    --accent-color: hsl(75, 94%, 57%);
 }
 
 h1, h2, h3, h4, h5, h6, p, li, a{
@@ -40,12 +40,12 @@ address{
 .profile-page{
     font-family: 'Inter';
     width: 100vw;
-    height: 100vh;
+    height: 100svh;
     display: flex;
     justify-content: center;
     align-items: center;
 
-    background-color: var(--dark-background);
+    background-color: var(--gray-900);
 }
 
 .profile-card{
@@ -56,7 +56,7 @@ address{
     flex-direction: column;
 
     align-items: center;
-    background-color: var(--dark-main);
+    background-color: var(--gray-800);
 }
 
 .profile-card, .social-links-list__item{
@@ -67,7 +67,7 @@ address{
     width: 90px;
     height: 90px;
     border-radius: 50%;
-    margin-bottom: 10px;
+    margin-bottom: 25px;
 }
 
 .profile-card__name{
@@ -76,12 +76,12 @@ address{
 }
 
 .profile-card__address, .social-links-list__item{
-    font-weight: 500;
+    font-weight: 600;
     font-size: 14px;
 }
 
 .profile-card__description{
-    font-weight: 300;
+    font-weight: 400;
     font-size: 14px;
     margin-block: 30px;
 }
@@ -97,7 +97,7 @@ address{
 
 .social-links-list__item{
     box-sizing: border-box;
-    background-color: var(--gray-second);
+    background-color: var(--gray-700);
     padding-top: 15px;
     text-align: center;
     height: 45px;
@@ -109,5 +109,13 @@ address{
 }
 
 .social-links-list__item:hover .social-links-list__link {
-    color: var(--dark-main);
+    color: var(--gray-800);
   }
+
+
+@media (max-width: 480px) {
+    .profile-card{
+        width: 330px;
+        padding: 25px;
+    }
+}
